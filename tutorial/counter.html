@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+        }
+        #btn {
+            margin-top: 1.5em;
+            font-family: fantasy;
+            font-size: inherit;
+            letter-spacing: 1px;
+            width: 400px;
+            padding: 20px;
+            background-color: #d32ca5;
+            color: #fff;
+            border: 2px solid #fac42d;
+            outline: 2px solid orangered;
+            border-radius: 10px;
+        }
+        #btn:hover {
+            opacity: 85%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click here</button>
+    <h2 id="heading"></h2>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const heading = document.querySelector("#heading");
+
+        let cnt = 1;
+
+        btn.onclick = () => {
+            btn.textContent = "Click again";
+            heading.textContent = `${cnt} clicks so far!`;
+            cnt++;
+        };
+
+    </script>
+</body>
+</html>

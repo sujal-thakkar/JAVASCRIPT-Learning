@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textBox" />
+    <div id="para"></div>
+</body>
+<script>
+    const textBox = document.querySelector("#textBox");
+    const para = document.querySelector("#para");
+
+    textBox.addEventListener("keydown", (event) => {
+        para.textContent = `You pressed "${event.key}".`;
+    })
+</script>
+</html>

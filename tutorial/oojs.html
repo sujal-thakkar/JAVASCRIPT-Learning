@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>
+      This example requires you to enter commands in your browser's JavaScript
+      console (see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        >What are browser developer tools</a
+      >
+      for more information).
+    </p>
+
+    <script>
+    // -----------simple way of creating an object------------
+
+      const person = {
+        name: ['sujal','thakkar'],
+        age: 19,
+        bio() {
+          console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+        },
+        introduceSelf() {
+          console.log(`Hi! I'm ${this.name[0]}.`);
+        },
+      };
+
+      const p2 = {
+        name: 'deepti',
+        introduceSelf() {
+            console.log(`hi, i'm ${this.name}, nice to meet u`)
+        },
+      }
+
+    //   -----------putting a declared variable and it's property into an object using [sq brackets]-----------
+      const myDataName = 'height';
+      const myDataValue = '4\'5\"';
+
+      person[myDataName] = myDataValue;
+      
+    //--------------adding 2 more properties into person object--------------
+      person.secname = ['sampriti', 'chel']
+      person.secage = 18
+
+    //   --------creating object template--------------
+
+    function createPerson(name) {
+        const obj = {};
+        obj.name = name;
+        obj.introduceSelf = function() {
+            console.log(`hi, my name is ${this.name}`);
+        }
+        return obj;
+    }
+    // -------------using constructor to create object template------------------
+
+    function Person(name) {
+        this.name = name;
+        this.introduceSelf = function() {
+            console.log(`hi, i'm ${this.name}.`)
+        }
+    }
+
+    const diya = new Person("diya");
+
+    </script>
+  </body>
+</html>

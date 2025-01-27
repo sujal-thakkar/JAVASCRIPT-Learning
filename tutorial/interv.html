@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+</body>
+<script>
+    const btn = document.querySelector('#btn');
+    let flag = 0;
+    btn.addEventListener('click', () => {
+        flag = 1;
+    })
+    const myPromise = new Promise((resolve, reject) => {
+        if(flag === 1) {
+            resolve('The promise has been resolved')
+        } else {
+            reject('error occured')
+        }
+    })
+</script>
+</html>

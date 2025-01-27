@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #book-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #book-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #book-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .add-book-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    gap: 5px;
+  }
+  #add-book-button {
+    margin-top: 20px;
+  }
+  
